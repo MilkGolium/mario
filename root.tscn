@@ -1,10 +1,42 @@
 [gd_scene format=3 uid="uid://b2gk8gj68r7j"]
 
-[ext_resource type="Texture2D" uid="uid://dkcpm68t7pjqj" path="res://images/icon.svg" id="1_pq8q7"]
-[ext_resource type="Script" uid="uid://8lifb5u43n1o" path="res://sprite_2d.gd" id="2_pyidc"]
+[ext_resource type="Texture2D" uid="uid://cdop58xva7a1o" path="res://images/cloud.png" id="1_pq8q7"]
 
-[node name="Node2D" type="Node2D" unique_id=691367791]
+[sub_resource type="Gradient" id="Gradient_vho56"]
+colors = PackedColorArray(0, 0.3764706, 0.69803923, 1, 1, 1, 1, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1216769199]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vho56"]
+gradient = SubResource("Gradient_vho56")
+fill_to = Vector2(0, 1)
+
+[node name="Root" type="Node2D" unique_id=691367791]
+
+[node name="Sky" type="Sprite2D" parent="." unique_id=302952426]
+position = Vector2(576, 324)
+scale = Vector2(18, 10.125)
+texture = SubResource("GradientTexture2D_vho56")
+
+[node name="Cloud" type="Sprite2D" parent="." unique_id=1781694970]
+position = Vector2(552, 112)
+scale = Vector2(2.29, 2.29)
 texture = ExtResource("1_pq8q7")
-script = ExtResource("2_pyidc")
+
+[node name="Cloud2" type="Sprite2D" parent="." unique_id=1780762947]
+position = Vector2(320, 152)
+scale = Vector2(2.29, 2.29)
+texture = ExtResource("1_pq8q7")
+
+[node name="Cloud3" type="Sprite2D" parent="." unique_id=915294211]
+position = Vector2(776, 176)
+scale = Vector2(2.29, 2.29)
+texture = ExtResource("1_pq8q7")
+
+[node name="Cloud4" type="Sprite2D" parent="." unique_id=98590499]
+position = Vector2(1024, 216)
+scale = Vector2(2.29, 2.29)
+texture = ExtResource("1_pq8q7")
+
+[node name="Cloud5" type="Sprite2D" parent="." unique_id=1530693276]
+position = Vector2(144, 200.00002)
+scale = Vector2(2.29, 2.29)
+texture = ExtResource("1_pq8q7")
