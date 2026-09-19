@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Mario"
-run/main_scene="uid://b2gk8gj68r7j"
+config/name="马里奥"
+run/main_scene="uid://ciuhmcrskl41"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://images/icon.svg"
+config/icon="res://icon.svg"
 
 [display]
 
@@ -22,7 +22,7 @@ window/stretch/aspect="expand"
 
 [dotnet]
 
-project/assembly_name="Mario"
+project/assembly_name="马里奥"
 
 [physics]
 

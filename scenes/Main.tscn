@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://ciuhmcrskl41"]
+
+[ext_resource type="Texture2D" uid="uid://cqxnh1yibxffb" path="res://assets/cloud.png" id="1_elqb8"]
+[ext_resource type="PackedScene" uid="uid://cax7top8u25v6" path="res://scenes/player.tscn" id="1_rarhs"]
+[ext_resource type="Texture2D" uid="uid://dpcdri18oqyl2" path="res://assets/brick.png" id="2_0bbpv"]
+[ext_resource type="Texture2D" uid="uid://cm8hk0748hrim" path="res://assets/tube.png" id="3_rarhs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxo1"]
+size = Vector2(19.942715, 42.75743)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fk76q"]
+size = Vector2(39.26796, 58.12931)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64qv3"]
+size = Vector2(39.287598, 57.31925)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wgxo1"]
+distance = -612.0
+
+[node name="场景" type="Node2D" unique_id=235970533]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1977357002]
+offset_left = -2759.0
+offset_top = -1718.0
+offset_right = 2896.0
+offset_bottom = 1936.0
+color = Color(0.5308315, 0.600897, 0.95392793, 1)
+
+[node name="云" type="Sprite2D" parent="." unique_id=701518848]
+position = Vector2(-597.00006, -909)
+scale = Vector2(6.363278, 3.968748)
+texture = ExtResource("1_elqb8")
+
+[node name="云2" type="Sprite2D" parent="." unique_id=63321806]
+position = Vector2(2381, -1155)
+scale = Vector2(7.8320293, 6.4257813)
+texture = ExtResource("1_elqb8")
+
+[node name="云3" type="Sprite2D" parent="." unique_id=483263771]
+position = Vector2(-1885.0002, -1063)
+scale = Vector2(7.062502, 5.5976567)
+texture = ExtResource("1_elqb8")
+
+[node name="云4" type="Sprite2D" parent="." unique_id=1862796088]
+position = Vector2(459, -1141)
+scale = Vector2(8.753907, 6.3867188)
+texture = ExtResource("1_elqb8")
+
+[node name="地面" type="Sprite2D" parent="." unique_id=18321800]
+position = Vector2(86.000015, 1647.0001)
+scale = Vector2(92.31249, 28.562498)
+texture = ExtResource("2_0bbpv")
+
+[node name="障碍物" type="Sprite2D" parent="." unique_id=1672375247]
+position = Vector2(-1630.0001, 991.00006)
+scale = Vector2(7.9567847, 7.1817617)
+texture = ExtResource("3_rarhs")
+
+[node name="Sprite2D" type="StaticBody2D" parent="障碍物" unique_id=1425923869]
+position = Vector2(-5.2785053, 6.12662)
+scale = Vector2(1.9851284, 1.3840327)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物/Sprite2D" unique_id=1146788403]
+position = Vector2(2.4057853, -4.5272593)
+shape = SubResource("RectangleShape2D_wgxo1")
+
+[node name="障碍物2" type="Sprite2D" parent="." unique_id=1031993519]
+position = Vector2(-402.49997, 893.49994)
+scale = Vector2(8.046873, 10.390624)
+texture = ExtResource("3_rarhs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="障碍物2" unique_id=1679290615]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物2/StaticBody2D" unique_id=16468787]
+position = Vector2(-0.3106842, -0.72179824)
+scale = Vector2(1.0000004, 1.0000001)
+shape = SubResource("RectangleShape2D_fk76q")
+
+[node name="障碍物3" type="Sprite2D" parent="." unique_id=1323346431]
+position = Vector2(950.00006, 948)
+scale = Vector2(8.705042, 8.548614)
+texture = ExtResource("3_rarhs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="障碍物3" unique_id=136886210]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物3/StaticBody2D" unique_id=1071318710]
+position = Vector2(-1.2636414, -1.0528183)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_64qv3")
+
+[node name="CharacterBody2D" parent="." unique_id=305726831 instance=ExtResource("1_rarhs")]
+position = Vector2(-2375, 1020)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2139490820]
+position = Vector2(-2048, 865)
+
+[node name="地面碰撞" type="StaticBody2D" parent="." unique_id=934479767]
+position = Vector2(-2784, 1176)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="地面碰撞" unique_id=938777208]
+shape = SubResource("WorldBoundaryShape2D_wgxo1")
+debug_color = Color(0.33681756, 0.4873382, 1, 0.41960785)
