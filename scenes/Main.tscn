@@ -16,7 +16,7 @@ size = Vector2(39.26796, 58.12931)
 size = Vector2(39.287598, 57.31925)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wgxo1"]
-distance = -612.0
+distance = -1191.3
 
 [node name="场景" type="Node2D" unique_id=235970533]
 
@@ -46,11 +46,6 @@ texture = ExtResource("1_elqb8")
 position = Vector2(459, -1141)
 scale = Vector2(8.753907, 6.3867188)
 texture = ExtResource("1_elqb8")
-
-[node name="地面" type="Sprite2D" parent="." unique_id=18321800]
-position = Vector2(86.000015, 1647.0001)
-scale = Vector2(92.31249, 28.562498)
-texture = ExtResource("2_0bbpv")
 
 [node name="障碍物" type="Sprite2D" parent="." unique_id=1672375247]
 position = Vector2(-1630.0001, 991.00006)
@@ -92,13 +87,18 @@ shape = SubResource("RectangleShape2D_64qv3")
 [node name="Player" parent="." unique_id=305726831 instance=ExtResource("1_rarhs")]
 position = Vector2(-2375, 1020)
 script = ExtResource("5_vcsgt")
+jump_velocity = -1000.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2139490820]
 position = Vector2(327, -155)
 
-[node name="地面碰撞" type="StaticBody2D" parent="." unique_id=934479767]
-position = Vector2(-2784, 1176)
+[node name="地面" type="StaticBody2D" parent="." unique_id=934479767]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="地面碰撞" unique_id=938777208]
+[node name="Sprite2D" type="Sprite2D" parent="地面" unique_id=18321800]
+position = Vector2(86.000015, 1647.0001)
+scale = Vector2(92.31249, 28.562498)
+texture = ExtResource("2_0bbpv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="地面" unique_id=938777208]
 shape = SubResource("WorldBoundaryShape2D_wgxo1")
 debug_color = Color(0.33681756, 0.4873382, 1, 0.41960785)
