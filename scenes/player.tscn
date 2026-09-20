@@ -12,7 +12,7 @@ position = Vector2(64, 72)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_wgxo1")
 
-[node name="玩家" type="Sprite2D" parent="." unique_id=495455606]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=495455606]
 position = Vector2(63.500004, 72.250015)
 scale = Vector2(7.35, 5.6612906)
 texture = ExtResource("1_3vyb7")
