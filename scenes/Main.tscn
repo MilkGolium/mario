@@ -85,10 +85,10 @@ scale = Vector2(0.99999976, 1)
 shape = SubResource("RectangleShape2D_64qv3")
 
 [node name="Player" parent="." unique_id=305726831 instance=ExtResource("1_rarhs")]
-position = Vector2(-2375, 1020)
+position = Vector2(-2375, 1112)
 script = ExtResource("5_vcsgt")
 player_speed = 600.0
-jump_velocity = -1000.0
+jump_velocity = -900.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2139490820]
 position = Vector2(327, -155)

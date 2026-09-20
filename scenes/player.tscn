@@ -3,16 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://be352lg0pkmd2" path="res://assets/player.png" id="1_3vyb7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxo1"]
-size = Vector2(148, 163.99998)
+size = Vector2(96, 143.99998)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=305726831]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1234560253]
-position = Vector2(64, 72)
 scale = Vector2(1, 1.0000001)
 shape = SubResource("RectangleShape2D_wgxo1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=495455606]
-position = Vector2(63.500004, 72.250015)
-scale = Vector2(7.35, 5.6612906)
+scale = Vector2(2.37, 2.37)
 texture = ExtResource("1_3vyb7")
