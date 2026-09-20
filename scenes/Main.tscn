@@ -87,10 +87,13 @@ shape = SubResource("RectangleShape2D_64qv3")
 [node name="Player" parent="." unique_id=305726831 instance=ExtResource("1_rarhs")]
 position = Vector2(-2375, 1020)
 script = ExtResource("5_vcsgt")
+player_speed = 600.0
 jump_velocity = -1000.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2139490820]
 position = Vector2(327, -155)
+zoom = Vector2(0.65, 0.65)
+limit_enabled = false
 
 [node name="地面" type="StaticBody2D" parent="." unique_id=934479767]
 
