@@ -6,8 +6,10 @@ extends CharacterBody2D
 
 func _physics_process(delta: float) -> void:
 	# 重力
+	# up
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	# down
 
 	# 跳跃
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
