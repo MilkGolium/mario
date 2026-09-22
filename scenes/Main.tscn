@@ -147,7 +147,7 @@ zoom = Vector2(0.25, 0.25)
 limit_enabled = false
 
 [node name="地面" type="StaticBody2D" parent="." unique_id=934479767]
-position = Vector2(-764, 716)
+position = Vector2(-1124, 716)
 
 [node name="Sprite2D" type="Sprite2D" parent="地面" unique_id=18321800]
 position = Vector2(2749.0002, 955)
