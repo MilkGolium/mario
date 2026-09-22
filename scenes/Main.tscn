@@ -16,9 +16,8 @@ size = Vector2(39.26796, 58.12931)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64qv3"]
 size = Vector2(39.287598, 57.31925)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fk76q"]
-normal = Vector2(-0.011559921, -0.9999332)
-distance = -498.16327
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wgxo1"]
+distance = -497.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xb04"]
 size = Vector2(309, 612)
@@ -26,8 +25,8 @@ size = Vector2(309, 612)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8tj4"]
 size = Vector2(363.5, 484)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3k7y6"]
-size = Vector2(390.5, 374.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_c01mt"]
+radius = 233.9765
 
 [node name="场景" type="Node2D" unique_id=235970533]
 
@@ -108,21 +107,20 @@ jump_velocity = -1000.0
 gravity = 960.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2139490820]
-position = Vector2(1000, -705)
-zoom = Vector2(0.35, 0.35)
+position = Vector2(1401, -575)
+zoom = Vector2(0.25, 0.25)
 limit_enabled = false
 
 [node name="地面" type="StaticBody2D" parent="." unique_id=934479767]
-position = Vector2(-770, 711)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="地面" unique_id=567538555]
-shape = SubResource("WorldBoundaryShape2D_fk76q")
-debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+position = Vector2(-764, 716)
 
 [node name="Sprite2D" type="Sprite2D" parent="地面" unique_id=18321800]
 position = Vector2(2749.0002, 955)
 scale = Vector2(165.50002, 28.562498)
 texture = ExtResource("2_0bbpv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="地面" unique_id=1856878034]
+shape = SubResource("WorldBoundaryShape2D_wgxo1")
 
 [node name="障碍物4" type="StaticBody2D" parent="." unique_id=876842533]
 
@@ -159,10 +157,10 @@ texture = ExtResource("1_elqb8")
 [node name="终点" type="StaticBody2D" parent="." unique_id=978823375]
 
 [node name="Sprite2D" type="Sprite2D" parent="终点" unique_id=101699714]
-position = Vector2(5507, 979)
-scale = Vector2(7.625, 6.984375)
+position = Vector2(5508.5, 975)
+scale = Vector2(7.2031255, 7.3125014)
 texture = ExtResource("6_c01mt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="终点" unique_id=1030879149]
-position = Vector2(5516, 977)
-shape = SubResource("RectangleShape2D_3k7y6")
+position = Vector2(5503, 971)
+shape = SubResource("CircleShape2D_c01mt")
