@@ -137,8 +137,9 @@ shape = SubResource("RectangleShape2D_82w3q")
 [node name="Player" parent="." unique_id=305726831 instance=ExtResource("1_rarhs")]
 position = Vector2(-2378, 1140)
 script = ExtResource("5_vcsgt")
-player_speed = 400.0
-jump_height = 450.0
+ground_acceleration = 2500.0
+jump_height = 460.0
+max_fall_speed = 1500.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2139490820]
 position = Vector2(1401, -575)
