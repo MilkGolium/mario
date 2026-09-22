@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://drvcjh5jpr7ho"]
+
+[ext_resource type="Texture2D" uid="uid://cqxnh1yibxffb" path="res://assets/cloud.png" id="1_amib3"]
+
+[node name="云" type="Node2D" unique_id=1927901995]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=344174766]
+position = Vector2(328, 328)
+scale = Vector2(11.25, 11.25)
+texture = ExtResource("1_amib3")

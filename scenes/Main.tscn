@@ -1,138 +1,61 @@
 [gd_scene format=3 uid="uid://ciuhmcrskl41"]
 
-[ext_resource type="Texture2D" uid="uid://cqxnh1yibxffb" path="res://assets/cloud.png" id="1_elqb8"]
 [ext_resource type="PackedScene" uid="uid://cax7top8u25v6" path="res://scenes/player.tscn" id="1_rarhs"]
 [ext_resource type="Texture2D" uid="uid://dpcdri18oqyl2" path="res://assets/brick.png" id="2_0bbpv"]
-[ext_resource type="Texture2D" uid="uid://cm8hk0748hrim" path="res://assets/tube.png" id="3_rarhs"]
+[ext_resource type="PackedScene" uid="uid://drvcjh5jpr7ho" path="res://scenes/云.tscn" id="2_q8u5g"]
+[ext_resource type="PackedScene" uid="uid://ccho5b26bmm04" path="res://scenes/终点.tscn" id="4_jlsqs"]
+[ext_resource type="PackedScene" uid="uid://ch48cd38wx2xq" path="res://scenes/低水管.tscn" id="4_lhr70"]
 [ext_resource type="Script" uid="uid://chtmo7yph1y3d" path="res://scripts/player.gd" id="5_vcsgt"]
-[ext_resource type="Texture2D" uid="uid://dfoww3syyy13r" path="res://assets/coin.png" id="6_c01mt"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxo1"]
-size = Vector2(16.1441, 33.602303)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjilx"]
-size = Vector2(44.490337, 14.759642)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fk76q"]
-size = Vector2(30.819403, 46.869164)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ospll"]
-size = Vector2(41.009705, 12.030064)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_64qv3"]
-size = Vector2(31.131409, 45.972366)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_82w3q"]
-size = Vector2(40.551216, 10.1770935)
+[ext_resource type="PackedScene" uid="uid://bqi11fh8xnl3c" path="res://scenes/高水管.tscn" id="5_wp0k4"]
+[ext_resource type="PackedScene" uid="uid://dd8l0n6qdputg" path="res://scenes/空气墙.tscn" id="10_lhr70"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wgxo1"]
 distance = -497.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xb04"]
-size = Vector2(276, 483)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5rci"]
-size = Vector2(367, 126)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8tj4"]
-size = Vector2(328, 402)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gu2f6"]
-size = Vector2(432, 100.5)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_c01mt"]
-radius = 233.9765
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3k7y6"]
-size = Vector2(307, 3833)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkmlp"]
-size = Vector2(261, 3438)
-
 [node name="场景" type="Node2D" unique_id=235970533]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1977357002]
-offset_left = -3411.0
-offset_top = -1780.0
-offset_right = 6108.0
-offset_bottom = 1874.0
+offset_left = -3692.0
+offset_top = -1942.0
+offset_right = 6884.0
+offset_bottom = 1712.0
 color = Color(0.5308315, 0.600897, 0.95392793, 1)
 
-[node name="云" type="Sprite2D" parent="." unique_id=701518848]
-position = Vector2(-1504, -432)
-scale = Vector2(6.363278, 3.968748)
-texture = ExtResource("1_elqb8")
+[node name="云" parent="." unique_id=1927901995 instance=ExtResource("2_q8u5g")]
+position = Vector2(-2658, -1208)
 
-[node name="云2" type="Sprite2D" parent="." unique_id=63321806]
-position = Vector2(1103.0001, -310.00018)
-scale = Vector2(7.8320293, 6.4257813)
-texture = ExtResource("1_elqb8")
+[node name="云2" parent="." unique_id=217149061 instance=ExtResource("2_q8u5g")]
+position = Vector2(-1337, -1404)
 
-[node name="云3" type="Sprite2D" parent="." unique_id=483263771]
-position = Vector2(-2499, -344.99988)
-scale = Vector2(7.062502, 5.5976567)
-texture = ExtResource("1_elqb8")
+[node name="云3" parent="." unique_id=2051501460 instance=ExtResource("2_q8u5g")]
+position = Vector2(1036, -1202)
 
-[node name="云4" type="Sprite2D" parent="." unique_id=1862796088]
-position = Vector2(-393, -417.99988)
-scale = Vector2(8.753907, 6.3867188)
-texture = ExtResource("1_elqb8")
+[node name="云4" parent="." unique_id=1014926349 instance=ExtResource("2_q8u5g")]
+position = Vector2(2730, -1129)
 
-[node name="障碍物" type="StaticBody2D" parent="." unique_id=2105205626]
-position = Vector2(-1630.0001, 991.00006)
-scale = Vector2(7.9567847, 7.1817617)
+[node name="云5" parent="." unique_id=265698857 instance=ExtResource("2_q8u5g")]
+position = Vector2(4944, -994)
 
-[node name="Sprite2D" type="Sprite2D" parent="障碍物" unique_id=738680464]
-position = Vector2(-0.43986702, 8.359595)
-scale = Vector2(1.066307, 1.3142523)
-texture = ExtResource("3_rarhs")
+[node name="低水管" parent="." unique_id=1581474505 instance=ExtResource("4_lhr70")]
+position = Vector2(-1753, 603)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物" unique_id=1146788403]
-position = Vector2(-0.69122314, 7.7975464)
-scale = Vector2(1.9851289, 1.384033)
-shape = SubResource("RectangleShape2D_wgxo1")
+[node name="低水管2" parent="." unique_id=785776411 instance=ExtResource("4_lhr70")]
+position = Vector2(628, 603)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="障碍物" unique_id=1731901977]
-position = Vector2(0.1257019, -23.114067)
-shape = SubResource("RectangleShape2D_kjilx")
+[node name="低水管3" parent="." unique_id=619933373 instance=ExtResource("4_lhr70")]
+position = Vector2(1674, 603)
 
-[node name="障碍物2" type="StaticBody2D" parent="." unique_id=421742232]
-position = Vector2(-402.49997, 893.49994)
-scale = Vector2(8.046873, 10.390624)
+[node name="低水管4" parent="." unique_id=1078468678 instance=ExtResource("4_lhr70")]
+position = Vector2(3791, 603)
 
-[node name="StaticBody2D" type="Sprite2D" parent="障碍物2" unique_id=1923488002]
-position = Vector2(0, 2.261661)
-scale = Vector2(1, 0.9954887)
-texture = ExtResource("3_rarhs")
+[node name="高水管" parent="." unique_id=378315129 instance=ExtResource("5_wp0k4")]
+position = Vector2(-562, 323)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物2" unique_id=16468787]
-position = Vector2(-0.18641281, 7.6030273)
-scale = Vector2(1.0000007, 1.0000001)
-shape = SubResource("RectangleShape2D_fk76q")
+[node name="高水管2" parent="." unique_id=231615430 instance=ExtResource("5_wp0k4")]
+position = Vector2(2752, 323)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="障碍物2" unique_id=336063355]
-position = Vector2(0.31066513, -21.365402)
-scale = Vector2(1.0000006, 1.0000001)
-shape = SubResource("RectangleShape2D_ospll")
-
-[node name="障碍物3" type="StaticBody2D" parent="." unique_id=1988092837]
-position = Vector2(950.00006, 948)
-scale = Vector2(8.705042, 8.548614)
-
-[node name="StaticBody2D" type="Sprite2D" parent="障碍物3" unique_id=841909190]
-position = Vector2(0, 4.035746)
-scale = Vector2(1, 0.93034106)
-texture = ExtResource("3_rarhs")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物3" unique_id=1071318710]
-position = Vector2(0.6318207, 10.118599)
-scale = Vector2(0.99999976, 1)
-shape = SubResource("RectangleShape2D_64qv3")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="障碍物3" unique_id=775678386]
-position = Vector2(0.4020691, -17.956131)
-scale = Vector2(0.99999976, 1)
-shape = SubResource("RectangleShape2D_82w3q")
+[node name="终点" parent="." unique_id=742494074 instance=ExtResource("4_jlsqs")]
+position = Vector2(5231, 681)
 
 [node name="Player" parent="." unique_id=305726831 instance=ExtResource("1_rarhs")]
 position = Vector2(-2378, 1140)
@@ -142,7 +65,7 @@ jump_height = 460.0
 max_fall_speed = 1500.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2139490820]
-position = Vector2(1401, -575)
+position = Vector2(1450, -990)
 zoom = Vector2(0.25, 0.25)
 limit_enabled = false
 
@@ -157,65 +80,8 @@ texture = ExtResource("2_0bbpv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="地面" unique_id=1856878034]
 shape = SubResource("WorldBoundaryShape2D_wgxo1")
 
-[node name="障碍物4" type="StaticBody2D" parent="." unique_id=876842533]
+[node name="空气墙" parent="地面" unique_id=1468409887 instance=ExtResource("10_lhr70")]
+position = Vector2(-2381, -661)
 
-[node name="Sprite2D" type="Sprite2D" parent="障碍物4" unique_id=1762702815]
-position = Vector2(2422.25, 915)
-scale = Vector2(8.992188, 10.46875)
-texture = ExtResource("3_rarhs")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物4" unique_id=285346479]
-position = Vector2(2423, 969.5)
-shape = SubResource("RectangleShape2D_6xb04")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="障碍物4" unique_id=1252890397]
-position = Vector2(2427.5, 664)
-shape = SubResource("RectangleShape2D_a5rci")
-
-[node name="障碍物5" type="StaticBody2D" parent="." unique_id=1393590484]
-
-[node name="Sprite2D" type="Sprite2D" parent="障碍物5" unique_id=201695910]
-position = Vector2(3844.9998, 975.99994)
-scale = Vector2(10.5625, 8.359375)
-texture = ExtResource("3_rarhs")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物5" unique_id=1242837384]
-position = Vector2(3847, 1020)
-shape = SubResource("RectangleShape2D_r8tj4")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="障碍物5" unique_id=1382585312]
-position = Vector2(3851, 777)
-shape = SubResource("RectangleShape2D_gu2f6")
-
-[node name="云5" type="Sprite2D" parent="." unique_id=2065219364]
-position = Vector2(3215, -431)
-scale = Vector2(5.421875, 3.9687505)
-texture = ExtResource("1_elqb8")
-
-[node name="云6" type="Sprite2D" parent="." unique_id=575472755]
-position = Vector2(5184, -308)
-scale = Vector2(9.375, 5.96875)
-texture = ExtResource("1_elqb8")
-
-[node name="终点" type="StaticBody2D" parent="." unique_id=978823375]
-
-[node name="Sprite2D" type="Sprite2D" parent="终点" unique_id=101699714]
-position = Vector2(5508.5, 975)
-scale = Vector2(7.2031255, 7.3125014)
-texture = ExtResource("6_c01mt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="终点" unique_id=1030879149]
-position = Vector2(5503, 971)
-shape = SubResource("CircleShape2D_c01mt")
-
-[node name="空气墙" type="StaticBody2D" parent="." unique_id=936595075]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="空气墙" unique_id=561392032]
-position = Vector2(-2959, 162.5)
-shape = SubResource("RectangleShape2D_3k7y6")
-
-[node name="空气墙2" type="StaticBody2D" parent="." unique_id=953577156]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="空气墙2" unique_id=1280727730]
-position = Vector2(6189, -104)
-shape = SubResource("RectangleShape2D_fkmlp")
+[node name="空气墙2" parent="地面" unique_id=1277399780 instance=ExtResource("10_lhr70")]
+position = Vector2(7009, -661)

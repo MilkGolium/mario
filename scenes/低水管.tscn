@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ch48cd38wx2xq"]
+
+[ext_resource type="Texture2D" uid="uid://cm8hk0748hrim" path="res://assets/tube.png" id="1_l081d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxo1"]
+size = Vector2(453, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fk76q"]
+size = Vector2(340, 518)
+
+[node name="低水管" type="Node2D" unique_id=1581474505]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1288388465]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1100513687]
+position = Vector2(207.25, 298.23788)
+scale = Vector2(11.1097555, 11.109758)
+texture = ExtResource("1_l081d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1032106930]
+position = Vector2(205.5, 38)
+shape = SubResource("RectangleShape2D_wgxo1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=256421183]
+position = Vector2(206, 365)
+shape = SubResource("RectangleShape2D_fk76q")
