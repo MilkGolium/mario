@@ -8,25 +8,46 @@
 [ext_resource type="Texture2D" uid="uid://dfoww3syyy13r" path="res://assets/coin.png" id="6_c01mt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxo1"]
-size = Vector2(19.942715, 42.75743)
+size = Vector2(16.1441, 33.602303)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjilx"]
+size = Vector2(44.490337, 14.759642)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fk76q"]
-size = Vector2(39.26796, 58.12931)
+size = Vector2(30.819403, 46.869164)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ospll"]
+size = Vector2(41.009705, 12.030064)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64qv3"]
-size = Vector2(39.287598, 57.31925)
+size = Vector2(31.131409, 45.972366)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82w3q"]
+size = Vector2(40.551216, 10.1770935)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wgxo1"]
 distance = -497.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xb04"]
-size = Vector2(309, 612)
+size = Vector2(276, 483)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5rci"]
+size = Vector2(367, 126)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8tj4"]
-size = Vector2(363.5, 484)
+size = Vector2(328, 402)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gu2f6"]
+size = Vector2(432, 100.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c01mt"]
 radius = 233.9765
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3k7y6"]
+size = Vector2(307, 3833)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkmlp"]
+size = Vector2(261, 3438)
 
 [node name="场景" type="Node2D" unique_id=235970533]
 
@@ -67,23 +88,32 @@ scale = Vector2(1.066307, 1.3142523)
 texture = ExtResource("3_rarhs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物" unique_id=1146788403]
-position = Vector2(-0.5027008, -0.13923645)
-scale = Vector2(1.9851285, 1.3840328)
+position = Vector2(-0.69122314, 7.7975464)
+scale = Vector2(1.9851289, 1.384033)
 shape = SubResource("RectangleShape2D_wgxo1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="障碍物" unique_id=1731901977]
+position = Vector2(0.1257019, -23.114067)
+shape = SubResource("RectangleShape2D_kjilx")
 
 [node name="障碍物2" type="StaticBody2D" parent="." unique_id=421742232]
 position = Vector2(-402.49997, 893.49994)
 scale = Vector2(8.046873, 10.390624)
 
 [node name="StaticBody2D" type="Sprite2D" parent="障碍物2" unique_id=1923488002]
-position = Vector2(0, 1.8285795)
-scale = Vector2(1, 0.98195493)
+position = Vector2(0, 2.261661)
+scale = Vector2(1, 0.9954887)
 texture = ExtResource("3_rarhs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物2" unique_id=16468787]
-position = Vector2(0.062131435, 1.9729373)
-scale = Vector2(1.0000005, 1.0000001)
+position = Vector2(-0.18641281, 7.6030273)
+scale = Vector2(1.0000007, 1.0000001)
 shape = SubResource("RectangleShape2D_fk76q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="障碍物2" unique_id=336063355]
+position = Vector2(0.31066513, -21.365402)
+scale = Vector2(1.0000006, 1.0000001)
+shape = SubResource("RectangleShape2D_ospll")
 
 [node name="障碍物3" type="StaticBody2D" parent="." unique_id=1988092837]
 position = Vector2(950.00006, 948)
@@ -95,14 +125,20 @@ scale = Vector2(1, 0.93034106)
 texture = ExtResource("3_rarhs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物3" unique_id=1071318710]
-position = Vector2(0.57437384, 4.4451632)
+position = Vector2(0.6318207, 10.118599)
 scale = Vector2(0.99999976, 1)
 shape = SubResource("RectangleShape2D_64qv3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="障碍物3" unique_id=775678386]
+position = Vector2(0.4020691, -17.956131)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_82w3q")
 
 [node name="Player" parent="." unique_id=305726831 instance=ExtResource("1_rarhs")]
 position = Vector2(-2378, 1140)
 script = ExtResource("5_vcsgt")
 player_speed = 400.0
+jump_height = 450.0
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2139490820]
 position = Vector2(1401, -575)
@@ -128,8 +164,12 @@ scale = Vector2(8.992188, 10.46875)
 texture = ExtResource("3_rarhs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物4" unique_id=285346479]
-position = Vector2(2423.5, 905)
+position = Vector2(2423, 969.5)
 shape = SubResource("RectangleShape2D_6xb04")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="障碍物4" unique_id=1252890397]
+position = Vector2(2427.5, 664)
+shape = SubResource("RectangleShape2D_a5rci")
 
 [node name="障碍物5" type="StaticBody2D" parent="." unique_id=1393590484]
 
@@ -139,8 +179,12 @@ scale = Vector2(10.5625, 8.359375)
 texture = ExtResource("3_rarhs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="障碍物5" unique_id=1242837384]
-position = Vector2(3844.75, 979)
+position = Vector2(3847, 1020)
 shape = SubResource("RectangleShape2D_r8tj4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="障碍物5" unique_id=1382585312]
+position = Vector2(3851, 777)
+shape = SubResource("RectangleShape2D_gu2f6")
 
 [node name="云5" type="Sprite2D" parent="." unique_id=2065219364]
 position = Vector2(3215, -431)
@@ -162,3 +206,15 @@ texture = ExtResource("6_c01mt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="终点" unique_id=1030879149]
 position = Vector2(5503, 971)
 shape = SubResource("CircleShape2D_c01mt")
+
+[node name="空气墙" type="StaticBody2D" parent="." unique_id=936595075]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="空气墙" unique_id=561392032]
+position = Vector2(-2959, 162.5)
+shape = SubResource("RectangleShape2D_3k7y6")
+
+[node name="空气墙2" type="StaticBody2D" parent="." unique_id=953577156]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="空气墙2" unique_id=1280727730]
+position = Vector2(6189, -104)
+shape = SubResource("RectangleShape2D_fkmlp")
