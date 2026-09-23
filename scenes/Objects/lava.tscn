@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bsa6iu4poo0ix"]
+
+[ext_resource type="Texture2D" uid="uid://ta4yftsh3oj6" path="res://assets/lava.png" id="1_lkfwm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aaei6"]
+size = Vector2(128, 128)
+
+[node name="Area2D" type="Area2D" unique_id=490468826]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=79670037]
+shape = SubResource("RectangleShape2D_aaei6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1418120296]
+scale = Vector2(2, 2)
+texture = ExtResource("1_lkfwm")
