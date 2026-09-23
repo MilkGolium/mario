@@ -3,21 +3,22 @@
 [ext_resource type="Texture2D" uid="uid://cm8hk0748hrim" path="res://assets/tube.png" id="1_l081d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxo1"]
-size = Vector2(105.8125, 31.25)
+size = Vector2(121.8125, 35.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fk76q"]
-size = Vector2(80, 120.5)
+size = Vector2(90.5, 138.75)
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1288388465]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1100513687]
-scale = Vector2(2.56, 2.56)
+position = Vector2(7.7600107, 11.166878)
+scale = Vector2(2.938536, 2.9385376)
 texture = ExtResource("1_l081d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1032106930]
-position = Vector2(0.09375, -60)
+position = Vector2(8.09375, -57.8125)
 shape = SubResource("RectangleShape2D_wgxo1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=256421183]
-position = Vector2(0, 16)
+position = Vector2(7.25, 28.625)
 shape = SubResource("RectangleShape2D_fk76q")
