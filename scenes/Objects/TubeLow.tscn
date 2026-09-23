@@ -8,18 +8,16 @@ size = Vector2(105.8125, 31.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fk76q"]
 size = Vector2(80, 120.5)
 
-[node name="低水管" type="Node2D" unique_id=1581474505]
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1288388465]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1288388465]
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1100513687]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1100513687]
 scale = Vector2(2.56, 2.56)
 texture = ExtResource("1_l081d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1032106930]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1032106930]
 position = Vector2(0.09375, -60)
 shape = SubResource("RectangleShape2D_wgxo1")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=256421183]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=256421183]
 position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_fk76q")

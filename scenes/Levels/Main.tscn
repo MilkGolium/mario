@@ -1,13 +1,102 @@
-[gd_scene format=3 uid="uid://ciuhmcrskl41"]
+[gd_scene format=3 uid="uid://45r0pvao14vx"]
 
 [ext_resource type="PackedScene" uid="uid://cax7top8u25v6" path="res://scenes/Objects/player.tscn" id="1_rarhs"]
 [ext_resource type="PackedScene" uid="uid://drvcjh5jpr7ho" path="res://scenes/Objects/Cloud.tscn" id="2_q8u5g"]
 [ext_resource type="PackedScene" uid="uid://ccho5b26bmm04" path="res://scenes/Objects/End.tscn" id="4_jlsqs"]
 [ext_resource type="PackedScene" uid="uid://ch48cd38wx2xq" path="res://scenes/Objects/TubeLow.tscn" id="4_lhr70"]
 [ext_resource type="PackedScene" uid="uid://clynh7q31ffvn" path="res://scenes/Objects/Ground.tscn" id="5_5hndv"]
-[ext_resource type="Script" uid="uid://chtmo7yph1y3d" path="res://scripts/player.gd" id="5_vcsgt"]
+[ext_resource type="Script" uid="uid://cseo5fpm5dsha" path="res://scripts/EndCoin.gd" id="5_aqkff"]
 [ext_resource type="PackedScene" uid="uid://bqi11fh8xnl3c" path="res://scenes/Objects/TubeHigh.tscn" id="5_wp0k4"]
 [ext_resource type="PackedScene" uid="uid://dd8l0n6qdputg" path="res://scenes/Objects/InvisableWall.tscn" id="10_lhr70"]
+
+[sub_resource type="GDScript" id="GDScript_stoa7"]
+script/source = "extends CharacterBody2D
+
+## 玩家最大水平速度
+@export var player_speed: float = 850.0
+
+## 地面加速度（越大起步越快；想更\"滑\"就调小）
+@export var ground_acceleration: float = 2200.0
+
+## 地面减速度（越大松手停得越快；想滑行更远就调小）
+@export var ground_deceleration: float = 1500.0
+
+## 空中加速度（通常比地面小，空中控制弱，更接近 Mario）
+@export var air_acceleration: float = 1200.0
+
+## 空中减速度（通常比地面小，空中松手几乎保持原速）
+@export var air_deceleration: float = 600.0
+
+## 反向掉头时的额外倍率（越大掉头越干脆；1.0 = 与普通减速一致）
+@export var turn_around_mult: float = 2.0
+
+## 期望的跳跃高度（单位：像素）
+@export var jump_height: float = 100.0
+
+## 上升段耗时（单位：秒）；数值越小，上升到预期高度越快
+@export var time_to_peak: float = 0.33
+## 下降重力倍率（下降速度通常比上升更快，手感更干脆）
+@export var fall_gravity_mult: float = 1.6
+
+## 限制最大下落速度
+@export var max_fall_speed: float = 900.0
+
+# 由上面参数自动算出
+var jump_velocity: float = 0.0
+var gravity_up: float = 0.0
+var gravity_down: float = 0.0
+
+func _ready() -> void:
+	jump_velocity = -2.0 * jump_height / time_to_peak
+	gravity_up    =  2.0 * jump_height / (time_to_peak * time_to_peak)
+	gravity_down  =  gravity_up * fall_gravity_mult
+
+func _physics_process(delta: float) -> void:
+	# —— 竖直：重力 ——
+	if not is_on_floor():
+		if velocity.y < 0.0:
+			velocity.y += gravity_up * delta
+		else:
+			velocity.y += gravity_down * delta
+		velocity.y = min(velocity.y, max_fall_speed)
+	else:
+		velocity.y = move_toward(velocity.y, 0.0, gravity_down * delta)
+
+	# —— 跳跃 ——
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = jump_velocity
+
+	# —— 水平：带惯性的加减速 ——
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	var target_speed := direction * player_speed
+
+	# 根据是否在地面，选择不同的加速度/减速度
+	var accel: float
+	var decel: float
+	if is_on_floor():
+		accel = ground_acceleration
+		decel = ground_deceleration
+	else:
+		accel = air_acceleration
+		decel = air_deceleration
+
+	# 计算本帧要用的速率 rate
+	var rate: float
+	if direction == 0.0:
+		# 无输入 → 普通减速
+		rate = decel
+	elif velocity.x != 0.0 and signf(direction) != signf(velocity.x):
+		# 有输入，且方向与当前速度相反 → 掉头，用更大的速率
+		rate = accel * turn_around_mult
+	else:
+		# 同向（或静止起步）→ 普通加速
+		rate = accel
+
+	velocity.x = move_toward(velocity.x, target_speed, rate * delta)
+
+	# —— 移动 ——
+	move_and_slide()
+"
 
 [node name="场景" type="Node2D" unique_id=235970533]
 
@@ -60,6 +149,7 @@ scale = Vector2(3, 3)
 [node name="End" parent="." unique_id=742494074 instance=ExtResource("4_jlsqs")]
 position = Vector2(5431.0005, 1017.0001)
 scale = Vector2(0.4, 0.4)
+script = ExtResource("5_aqkff")
 
 [node name="Ground" parent="." unique_id=388529340 instance=ExtResource("5_5hndv")]
 position = Vector2(1624.42, 1671)
@@ -70,9 +160,9 @@ position = Vector2(-3289, 35)
 [node name="Invisblewall2" parent="." unique_id=1277399780 instance=ExtResource("10_lhr70")]
 position = Vector2(6533, 55)
 
-[node name="Player" parent="." unique_id=305726831 instance=ExtResource("1_rarhs")]
+[node name="Player" parent="." unique_id=305726831 groups=["player"] instance=ExtResource("1_rarhs")]
 position = Vector2(-2378, 1140)
-script = ExtResource("5_vcsgt")
+script = SubResource("GDScript_stoa7")
 player_speed = 1000.0
 ground_acceleration = 2800.0
 jump_height = 600.0

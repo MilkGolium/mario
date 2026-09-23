@@ -3,9 +3,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxo1"]
 size = Vector2(234, 2914.5)
 
-[node name="空气墙" type="Node2D" unique_id=1468409887]
+[node name="StaticBody2D" type="StaticBody2D" unique_id=284408250]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=284408250]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1524442218]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1524442218]
 shape = SubResource("RectangleShape2D_wgxo1")

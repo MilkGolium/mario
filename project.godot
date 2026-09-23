@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="马里奥"
-run/main_scene="uid://ciuhmcrskl41"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +22,10 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="马里奥"
+
+[global_group]
+
+player=""
 
 [input]
 

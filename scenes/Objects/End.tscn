@@ -5,14 +5,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_wgxo1"]
 radius = 274.41028
 
-[node name="终点" type="Node2D" unique_id=742494074]
+[node name="StaticBody2D" type="Area2D" unique_id=226299379]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=989947469]
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1247617264]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1247617264]
 scale = Vector2(8.59375, 8.59375)
 texture = ExtResource("1_jxytc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1283692806]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1283692806]
 position = Vector2(-4, -5)
 shape = SubResource("CircleShape2D_wgxo1")
