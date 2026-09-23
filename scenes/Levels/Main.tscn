@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://ciuhmcrskl41"]
+
+[ext_resource type="PackedScene" uid="uid://cax7top8u25v6" path="res://scenes/Objects/player.tscn" id="1_rarhs"]
+[ext_resource type="PackedScene" uid="uid://drvcjh5jpr7ho" path="res://scenes/Objects/Cloud.tscn" id="2_q8u5g"]
+[ext_resource type="PackedScene" uid="uid://ccho5b26bmm04" path="res://scenes/Objects/End.tscn" id="4_jlsqs"]
+[ext_resource type="PackedScene" uid="uid://ch48cd38wx2xq" path="res://scenes/Objects/TubeLow.tscn" id="4_lhr70"]
+[ext_resource type="PackedScene" uid="uid://clynh7q31ffvn" path="res://scenes/Objects/Ground.tscn" id="5_5hndv"]
+[ext_resource type="Script" uid="uid://chtmo7yph1y3d" path="res://scripts/player.gd" id="5_vcsgt"]
+[ext_resource type="PackedScene" uid="uid://bqi11fh8xnl3c" path="res://scenes/Objects/TubeHigh.tscn" id="5_wp0k4"]
+[ext_resource type="PackedScene" uid="uid://dd8l0n6qdputg" path="res://scenes/Objects/InvisableWall.tscn" id="10_lhr70"]
+
+[node name="场景" type="Node2D" unique_id=235970533]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1977357002]
+offset_left = -3692.0
+offset_top = -1942.0
+offset_right = 6884.0
+offset_bottom = 1712.0
+color = Color(0.5308315, 0.600897, 0.95392793, 1)
+
+[node name="Cloud" parent="." unique_id=1927901995 instance=ExtResource("2_q8u5g")]
+position = Vector2(-2658, -1208)
+
+[node name="Cloud2" parent="." unique_id=217149061 instance=ExtResource("2_q8u5g")]
+position = Vector2(-1337, -1404)
+
+[node name="Cloud3" parent="." unique_id=2051501460 instance=ExtResource("2_q8u5g")]
+position = Vector2(1036, -1202)
+
+[node name="Cloud4" parent="." unique_id=1014926349 instance=ExtResource("2_q8u5g")]
+position = Vector2(2730, -1129)
+
+[node name="Cloud5" parent="." unique_id=265698857 instance=ExtResource("2_q8u5g")]
+position = Vector2(4944, -994)
+
+[node name="TubeLow" parent="." unique_id=1581474505 instance=ExtResource("4_lhr70")]
+position = Vector2(-1880, 1014.0002)
+scale = Vector2(2.653, 2.653)
+
+[node name="TubeLow2" parent="." unique_id=785776411 instance=ExtResource("4_lhr70")]
+position = Vector2(628, 1014)
+scale = Vector2(2.653, 2.653)
+
+[node name="TubeLow3" parent="." unique_id=619933373 instance=ExtResource("4_lhr70")]
+position = Vector2(1674, 1014)
+scale = Vector2(2.653, 2.653)
+
+[node name="TubeLow4" parent="." unique_id=1078468678 instance=ExtResource("4_lhr70")]
+position = Vector2(3791, 1014)
+scale = Vector2(2.653, 2.653)
+
+[node name="TubeHigh" parent="." unique_id=378315129 instance=ExtResource("5_wp0k4")]
+position = Vector2(-562, 935.0001)
+scale = Vector2(3, 3)
+
+[node name="TubeHigh2" parent="." unique_id=231615430 instance=ExtResource("5_wp0k4")]
+position = Vector2(2752, 935)
+scale = Vector2(3, 3)
+
+[node name="End" parent="." unique_id=742494074 instance=ExtResource("4_jlsqs")]
+position = Vector2(5431.0005, 1017.0001)
+scale = Vector2(0.4, 0.4)
+
+[node name="Ground" parent="." unique_id=388529340 instance=ExtResource("5_5hndv")]
+position = Vector2(1624.42, 1671)
+
+[node name="Invisblewall" parent="." unique_id=1468409887 instance=ExtResource("10_lhr70")]
+position = Vector2(-3289, 35)
+
+[node name="Invisblewall2" parent="." unique_id=1277399780 instance=ExtResource("10_lhr70")]
+position = Vector2(6533, 55)
+
+[node name="Player" parent="." unique_id=305726831 instance=ExtResource("1_rarhs")]
+position = Vector2(-2378, 1140)
+script = ExtResource("5_vcsgt")
+player_speed = 1000.0
+ground_acceleration = 2800.0
+jump_height = 600.0
+max_fall_speed = 2500.0
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2139490820]
+position = Vector2(1450, -990)
+zoom = Vector2(0.25, 0.25)
+limit_enabled = false

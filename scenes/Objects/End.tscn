@@ -10,10 +10,9 @@ radius = 274.41028
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=989947469]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1247617264]
-position = Vector2(243, 243)
 scale = Vector2(8.59375, 8.59375)
 texture = ExtResource("1_jxytc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1283692806]
-position = Vector2(238, 240)
+position = Vector2(-4, -5)
 shape = SubResource("CircleShape2D_wgxo1")

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b2gk8gj68r7j"]
+
+[ext_resource type="PackedScene" uid="uid://drvcjh5jpr7ho" path="res://scenes/Objects/Cloud.tscn" id="1_yqorp"]
+
+[sub_resource type="Gradient" id="Gradient_vho56"]
+colors = PackedColorArray(0, 0.3764706, 0.69803923, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vho56"]
+gradient = SubResource("Gradient_vho56")
+fill_to = Vector2(0, 1)
+
+[node name="Root" type="Node2D" unique_id=691367791]
+
+[node name="Sky" type="Sprite2D" parent="." unique_id=302952426]
+position = Vector2(576, 324)
+scale = Vector2(18, 10.125)
+texture = SubResource("GradientTexture2D_vho56")
+
+[node name="云" parent="." unique_id=1927901995 instance=ExtResource("1_yqorp")]
+position = Vector2(120, 120)
+scale = Vector2(0.22310807, 0.22310807)
+
+[node name="云2" parent="." unique_id=313338397 instance=ExtResource("1_yqorp")]
+position = Vector2(352, 184)
+scale = Vector2(0.22310807, 0.22310807)
+
+[node name="云3" parent="." unique_id=271181092 instance=ExtResource("1_yqorp")]
+position = Vector2(512, 136)
+scale = Vector2(0.22310807, 0.22310807)
+
+[node name="云4" parent="." unique_id=157794427 instance=ExtResource("1_yqorp")]
+position = Vector2(832, 96)
+scale = Vector2(0.22310807, 0.22310807)
+
+[node name="云5" parent="." unique_id=1523585386 instance=ExtResource("1_yqorp")]
+position = Vector2(1008, 208.00002)
+scale = Vector2(0.22310807, 0.22310807)

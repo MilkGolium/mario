@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://clynh7q31ffvn"]
+
+[ext_resource type="Texture2D" uid="uid://dpcdri18oqyl2" path="res://assets/brick.png" id="1_1rkf4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wgxo1"]
+
+[node name="Ground" type="StaticBody2D" unique_id=388529340]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1279821202]
+scale = Vector2(165.50002, 28.562498)
+texture = ExtResource("1_1rkf4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1253751886]
+position = Vector2(0, -457)
+shape = SubResource("WorldBoundaryShape2D_wgxo1")

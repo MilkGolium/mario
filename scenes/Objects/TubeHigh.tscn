@@ -3,24 +3,23 @@
 [ext_resource type="Texture2D" uid="uid://yi6nwimoqhdv" path="res://assets/tube_high.png" id="1_05lut"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxo1"]
-size = Vector2(398.625, 781.5)
+size = Vector2(79.8125, 156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fk76q"]
-size = Vector2(526, 154)
+size = Vector2(105.5, 32)
 
 [node name="高水管" type="Node2D" unique_id=378315129]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=80782102]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1256169826]
-position = Vector2(243.25, 433.10358)
-scale = Vector2(12.865853, 12.86585)
+scale = Vector2(2.56, 2.56)
 texture = ExtResource("1_05lut")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=56144355]
-position = Vector2(243.6875, 511.25)
+position = Vector2(0, 16)
 shape = SubResource("RectangleShape2D_wgxo1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=664736860]
-position = Vector2(242, 40)
+position = Vector2(0, -78)
 shape = SubResource("RectangleShape2D_fk76q")
