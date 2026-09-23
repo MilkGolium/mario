@@ -47,45 +47,6 @@ texture = ExtResource("1_b27d1")
 [sub_resource type="TileSet" id="TileSet_wgxo1"]
 sources/0 = SubResource("TileSetAtlasSource_603ed")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxo1"]
-size = Vector2(1604, 192)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fk76q"]
-size = Vector2(13369, 130)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_64qv3"]
-size = Vector2(2133, 196.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xb04"]
-size = Vector2(254, 63)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8tj4"]
-size = Vector2(317.25, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3k7y6"]
-size = Vector2(447, 64.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkmlp"]
-size = Vector2(449, 66)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjilx"]
-size = Vector2(512, 109)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ospll"]
-size = Vector2(1601, 130.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_82w3q"]
-size = Vector2(1233, 130)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5rci"]
-size = Vector2(1133, 141)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gu2f6"]
-size = Vector2(1360, 176.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7rp2"]
-size = Vector2(1008.5, 129)
-
 [node name="level2" type="Node2D" unique_id=1316253831]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=175043859]
@@ -129,84 +90,6 @@ position = Vector2(-11419, 182)
 
 [node name="StaticBody2D2" parent="." unique_id=1709350514 instance=ExtResource("2_04sgr")]
 position = Vector2(5040, 182)
-
-[node name="地面地块1" type="StaticBody2D" parent="." unique_id=820659824]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="地面地块1" unique_id=953718171]
-position = Vector2(-10865, 1392)
-shape = SubResource("RectangleShape2D_wgxo1")
-
-[node name="地面地块2" type="StaticBody2D" parent="." unique_id=2111413244]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="地面地块2" unique_id=1169967930]
-position = Vector2(-3378.5, 1424)
-shape = SubResource("RectangleShape2D_fk76q")
-
-[node name="地面地块3" type="StaticBody2D" parent="." unique_id=575949206]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="地面地块3" unique_id=291944747]
-position = Vector2(4375.5, 1392.25)
-shape = SubResource("RectangleShape2D_64qv3")
-
-[node name="漂浮块" type="StaticBody2D" parent="." unique_id=532506754]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="漂浮块" unique_id=2017139837]
-position = Vector2(-9856, 1151.5)
-shape = SubResource("RectangleShape2D_6xb04")
-
-[node name="漂浮块2" type="StaticBody2D" parent="." unique_id=898278329]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="漂浮块2" unique_id=1886338393]
-position = Vector2(-9440.625, 1040)
-shape = SubResource("RectangleShape2D_r8tj4")
-
-[node name="漂浮块3" type="StaticBody2D" parent="." unique_id=1057840639]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="漂浮块3" unique_id=1071202407]
-position = Vector2(-8782.5, 1120.25)
-shape = SubResource("RectangleShape2D_3k7y6")
-
-[node name="漂浮块4" type="StaticBody2D" parent="." unique_id=247607293]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="漂浮块4" unique_id=290319514]
-position = Vector2(-8096.5, 1040)
-shape = SubResource("RectangleShape2D_fkmlp")
-
-[node name="漂浮块5" type="StaticBody2D" parent="." unique_id=1632559476]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="漂浮块5" unique_id=427857478]
-position = Vector2(-7201, 616.5)
-shape = SubResource("RectangleShape2D_kjilx")
-
-[node name="漂浮块6" type="StaticBody2D" parent="." unique_id=339833427]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="漂浮块6" unique_id=1112609585]
-position = Vector2(-5679.5, 847.25)
-shape = SubResource("RectangleShape2D_ospll")
-
-[node name="漂浮块7" type="StaticBody2D" parent="." unique_id=1858162352]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="漂浮块7" unique_id=1729431408]
-position = Vector2(-3209.5, 848)
-shape = SubResource("RectangleShape2D_82w3q")
-
-[node name="漂浮块8" type="StaticBody2D" parent="." unique_id=885409209]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="漂浮块8" unique_id=777972081]
-position = Vector2(-1752.5, 362.5)
-shape = SubResource("RectangleShape2D_a5rci")
-
-[node name="漂浮块9" type="StaticBody2D" parent="." unique_id=334315959]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="漂浮块9" unique_id=167100488]
-position = Vector2(376, -182.75)
-shape = SubResource("RectangleShape2D_gu2f6")
-
-[node name="漂浮块10" type="StaticBody2D" parent="." unique_id=1914798755]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="漂浮块10" unique_id=452418196]
-position = Vector2(1814.75, 352.5)
-shape = SubResource("RectangleShape2D_q7rp2")
 
 [node name="StaticBody2D3" parent="." unique_id=1288388465 instance=ExtResource("3_pyh4d")]
 position = Vector2(-10501, 1200)
