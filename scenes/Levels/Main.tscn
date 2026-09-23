@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://cseo5fpm5dsha" path="res://scripts/EndCoin.gd" id="5_aqkff"]
 [ext_resource type="PackedScene" uid="uid://bqi11fh8xnl3c" path="res://scenes/Objects/TubeHigh.tscn" id="5_wp0k4"]
 [ext_resource type="PackedScene" uid="uid://dd8l0n6qdputg" path="res://scenes/Objects/InvisableWall.tscn" id="10_lhr70"]
+[ext_resource type="PackedScene" uid="uid://dowju23bqof6h" path="res://scenes/Objects/monster.tscn" id="10_stoa7"]
 
 [sub_resource type="GDScript" id="GDScript_stoa7"]
 script/source = "extends CharacterBody2D
@@ -102,10 +103,10 @@ func _physics_process(delta: float) -> void:
 [node name="场景" type="Node2D" unique_id=235970533]
 
 [node name="Background" type="ColorRect" parent="." unique_id=1977357002]
-offset_left = -3692.0
-offset_top = -1942.0
-offset_right = 6884.0
-offset_bottom = 1712.0
+offset_left = -3683.0
+offset_top = -1888.0
+offset_right = 6893.0
+offset_bottom = 1766.0
 color = Color(0.5308315, 0.600897, 0.95392793, 1)
 
 [node name="Cloud" parent="." unique_id=1927901995 instance=ExtResource("2_q8u5g")]
@@ -176,3 +177,9 @@ max_fall_speed = 2500.0
 position = Vector2(1450, -990)
 zoom = Vector2(0.25, 0.25)
 limit_enabled = false
+
+[node name="monster" parent="." unique_id=424279134 instance=ExtResource("10_stoa7")]
+position = Vector2(-1073, 1071)
+
+[node name="monster2" parent="." unique_id=1923705986 instance=ExtResource("10_stoa7")]
+position = Vector2(1104, 1071)
