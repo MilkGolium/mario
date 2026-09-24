@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ch48cd38wx2xq" path="res://scenes/Objects/TubeLow.tscn" id="3_pyh4d"]
 [ext_resource type="PackedScene" uid="uid://bqi11fh8xnl3c" path="res://scenes/Objects/TubeHigh.tscn" id="5_048ga"]
 [ext_resource type="PackedScene" uid="uid://cax7top8u25v6" path="res://scenes/Objects/player.tscn" id="6_2fma4"]
+[ext_resource type="Script" uid="uid://ccpim4l5bbqxm" path="res://scripts/player.gd" id="7_2fma4"]
 [ext_resource type="PackedScene" uid="uid://dowju23bqof6h" path="res://scenes/Objects/monster.tscn" id="7_a0dj8"]
 [ext_resource type="PackedScene" uid="uid://ccho5b26bmm04" path="res://scenes/Objects/End.tscn" id="8_048ga"]
 
@@ -132,6 +133,8 @@ position = Vector2(-4316, 1030)
 
 [node name="CharacterBody2D" parent="." unique_id=305726831 instance=ExtResource("6_2fma4")]
 position = Vector2(-11022, 1224)
+script = ExtResource("7_2fma4")
+jump_height = 600.0
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=221722466]
 position = Vector2(978, -673)
